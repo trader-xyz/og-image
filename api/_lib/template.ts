@@ -87,10 +87,10 @@ function getCss(theme: string = 'white', fontSize: string = '14px') {
     }
 
     .image-wrapper {
-        height: 512px;
-        max-height: 512px;
-        width: 512px;
-        min-width: 512px;
+        height: 576px;
+        max-height: 576px;
+        width: 576px;
+        min-width: 576px;
         object-fit: contain;
         border: 8px solid #FFFFFF;
         border-radius: 64px;
@@ -100,7 +100,7 @@ function getCss(theme: string = 'white', fontSize: string = '14px') {
     }
 
     .image {
-        // height: 512px;
+        // height: 576px;
         object-fit: contain;
         height: 100%;
         width: 100%;
@@ -159,7 +159,7 @@ export function getHtml(parsedReq: ParsedRequest, assets: TradeableAssetBase[] |
             <div class="spacer">
             <div class="images-wrapper">
                 ${assets?.map((img) =>
-                     getImage(img.srcImg, "auto", "512px", img.background || '#ffffff')
+                     getImage(img.srcImg, "auto", "576px", img.background || '#ffffff')
                 ).join('')}
             </div>
             <div class="spacer">
