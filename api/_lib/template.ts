@@ -159,7 +159,7 @@ export function getHtml(parsedReq: ParsedRequest, assets: TradeableAssetBase[] |
             <div class="spacer">
             <div class="images-wrapper">
                 ${assets?.map((img) =>
-                     getImage(img.srcImg, "auto", "576px", img.background || '#ffffff')
+                     getImage(img.srcImg || 'https://trader.xyz/images/missing-img-lg.png', "auto", "576px", img.background || '#ffffff')
                 ).join('')}
             </div>
             <div class="spacer">

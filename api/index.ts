@@ -48,6 +48,11 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
         const parsedReq = parseRequest(req);
         console.log('req')
         console.log('parsedReq', parsedReq.slugId)
+        if (!parsedReq.slugId) {
+          res.statusCode = 200;
+          res.end();
+          return res;
+        }
         const tradeRaw = await fetch(`https://trader.xyz/api/trade/${parsedReq.slugId}`)
         const tradeJson: BackendTradeSingleQueryResponse | undefined = await tradeRaw.json();
         const makerAssets = tradeJson?.trade?.data.makerAssets;

@@ -13,13 +13,8 @@ export function parseRequest(req: IncomingMessage) {
     if (Array.isArray(theme)) {
         throw new Error('Expected a single theme');
     }
-    
-    if (!slugId) {
-        throw new Error('Slug Id is missing');
-    }
-
     const parsedRequest: ParsedRequest = {
-        slugId,
+        slugId: slugId || '',
         // fileType: extension === 'jpeg' ? extension : 'png',
         // text: decodeURIComponent(text),
         // theme: theme === 'dark' ? 'dark' : 'light',
