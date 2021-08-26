@@ -84,7 +84,6 @@ function getCss(theme: string = 'white', fontSize: string = '14px') {
         justify-content: center;
         justify-items: center;
         gap: 16px;
-        padding-bottom: 128px;
     }
 
     .image-wrapper {
@@ -119,8 +118,8 @@ function getCss(theme: string = 'white', fontSize: string = '14px') {
 
     .absolute-anchor {
         position: absolute;
-        top: 64px;
-        right: 64px;
+        top: 128px;
+        right: 128px;
     }
 
     .emoji {
